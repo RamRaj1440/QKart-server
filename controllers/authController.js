@@ -30,6 +30,15 @@ const register = async (req, res) => {
         res.status(500).json({ message: "Server error during registration" });
     }
 };
+res.status(201).json({
+    message: "Registration successful",
+    _id: user._id,
+    username: user.username,
+    email: user.email,
+    balance: user.balance,
+    isAdmin: user.isAdmin, // ← add this
+    token: generateToken(user._id),
+});
 
 // ── Login ──────────────────────────────────────────────
 const login = async (req, res) => {
@@ -56,6 +65,7 @@ const login = async (req, res) => {
             username: user.username,
             email: user.email,
             balance: user.balance,
+            isAdmin: user.isAdmin,
             token: generateToken(user._id),
         });
     } catch (error) {
