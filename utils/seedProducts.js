@@ -8,7 +8,7 @@ const products = [
     {
         name: "Apple iPhone 14 Pro Max 256GB",
         category: "Electronics",
-        price: 129999,
+        price: 49999,
         rating: 4.8,
         reviews: 2341,
         image: "/images/iphone.jpg",
@@ -18,7 +18,7 @@ const products = [
     {
         name: "Samsung 65 inch 4K Smart TV",
         category: "Electronics",
-        price: 79999,
+        price: 39999,
         rating: 4.6,
         reviews: 1203,
         image: "/images/samsung-tv.jpg",
@@ -68,7 +68,7 @@ const products = [
     {
         name: "MacBook Air M2 8GB 256GB",
         category: "Electronics",
-        price: 114900,
+        price: 49999,
         rating: 4.9,
         reviews: 1876,
         image: "/images/macbook.jpg",
