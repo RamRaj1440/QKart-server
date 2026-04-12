@@ -3,6 +3,8 @@ const {
     createRazorpayOrder,
     verifyPaymentAndPlaceOrder,
     updateOrderStatus,
+    cancelOrder,
+    returnOrder,
     getMyOrders,
     getOrderById,
 } = require("../controllers/orderController");
@@ -15,5 +17,7 @@ router.post("/create-payment", protect, createRazorpayOrder);
 router.get("/", protect, getMyOrders);
 router.get("/:id", protect, getOrderById);
 router.put("/:id/status", protect, updateOrderStatus);
+router.post("/:id/cancel", protect, cancelOrder);
+router.post("/:id/return", protect, returnOrder);
 
 module.exports = router;
