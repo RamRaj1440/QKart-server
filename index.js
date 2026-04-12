@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // ── Socket.io Setup ────────────────────────────────────
 const io = new Server(server, {
     cors: {
-        origin: process.env.CLIENT_URL || ["https://q-kart-client.vercel.app", "http://localhost:5173"],
+        origin: process.env.CLIENT_URL || ["https://q-kart-client.vercel.app", "http://localhost:5173", "http://localhost:5174"],
         methods: ["GET", "POST"],
     },
 });
