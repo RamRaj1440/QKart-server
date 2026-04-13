@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema(
             type: Number,
             default: 500000, // Starting wallet balance
         },
+        isAdmin: {
+            type: Boolean,
+            default: false, // Regular users are not admins by default
+        },
     },
     { timestamps: true }
 );

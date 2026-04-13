@@ -45,11 +45,11 @@ app.use(cors({
 app.use(express.json());
 
 // ── Routes ─────────────────────────────────────────────
-app.use("/api/v1/admin", require("./routes/adminRoutes"));
 app.use("/api/v1/auth", require("./routes/authRoutes"));
 app.use("/api/v1/products", require("./routes/productRoutes"));
 app.use("/api/v1/cart", require("./routes/cartRoutes"));
 app.use("/api/v1/orders", require("./routes/orderRoutes"));
+app.use("/api/v1/admin", require("./routes/adminRoutes"));
 
 // ── Health Check ───────────────────────────────────────
 app.get("/api/v1", (req, res) => {
