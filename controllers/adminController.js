@@ -5,7 +5,7 @@ const Product = require("../models/Product");
 // ── Get Dashboard Stats ────────────────────────────────
 const getDashboardStats = async (req, res) => {
     try {
-        const totalUsers = await User.countDocuments({ isAdmin: false });
+        const totalUsers = await User.countDocuments({ isAdmin: { $ne: true } });
         const totalOrders = await Order.countDocuments();
         const totalProducts = await Product.countDocuments();
 

@@ -29,6 +29,15 @@ const orderSchema = new mongoose.Schema(
             state: { type: String, required: true },
             pincode: { type: String, required: true },
         },
+        expectedDelivery: {
+            type: Date,
+            default: function () {
+                const date = new Date();
+                date.setDate(date.getDate() + 5);
+                return date;
+            },
+        },
+
         status: {
             type: String,
             enum: ["placed", "processing", "shipped", "delivered", "cancelled", "returned"],
