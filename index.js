@@ -52,7 +52,7 @@ app.use("/api/v1/orders", require("./routes/orderRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 
 // ── Health Check ───────────────────────────────────────
-app.get("/api/v1", (req, res) => {
+app.get("/", (req, res) => {
     res.json({ message: "QKart API is running " });
 });
 
